@@ -10,7 +10,7 @@ function play() {
   //   Popolo Grid con 100 div contententi la cella
   for (let i = 0; i < 100; i++) {
     const n = i + 1;
-    const cellHtml = `<div class="cell">${n}</div>`;
+    const cellHtml = `<div class="cell hard">${n}</div>`;
     gridDOMElement.innerHTML += cellHtml;
   }
   //   creo un array contenente tutte le celle
@@ -23,6 +23,7 @@ function play() {
 
     currentCellDOMElement.addEventListener('click', function () {
       console.log(`Questa è la casella ${n}`);
+      currentCellDOMElement.classList.add('selected');
     });
   }
 }
